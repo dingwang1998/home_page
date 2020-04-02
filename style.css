@@ -118,3 +118,182 @@ header nav a{
     cursor: pointer;
     outline: none;
 }
+
+/* 关于我们区域 */
+.content-warpper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 32px;
+    flex-direction: column;
+}
+
+section{
+    display: grid;
+    justify-items: center;
+    max-width: 1180px;
+    padding: 0 80px;
+}
+/* 给section设置一个背景色  */
+.section-bg{
+    position: relative;
+}
+.section-bg::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #f9fbfb;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+}
+
+
+.title1{
+    font-size: 34px;
+    color: var(--text-color-dark);
+}
+.title1::after{
+    content: "";
+    display: block;
+    width: 80%;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin-top: 14px;
+    transform: translateX(10%);
+}
+
+.intro{
+    margin: 28px 0 60px 0;
+    font-size: 18px;
+    color: var(--text-color-dark-gray);
+}
+
+.features{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 126px 126px;
+    /* 列之间的宽度 */
+    column-gap: 5vw;
+}
+
+.feature{
+    display: grid;
+    /* 为格子站位 */
+    grid-template-areas: 
+    "icon title"
+    "icon content";
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+.feature i.fas{
+    grid-area: icon;
+    font-size: 34px;
+    color: var(--primary-color);
+}
+
+.feature-title{
+    grid-area: title;
+    font-size: 18px;
+    color: var(--text-color-dark);
+}
+
+.feature-content{
+    grid-area: content;
+    color: var(--text-color-gray);
+    margin-top: 8px;
+}
+/* 成功案例 */
+.showcases{
+    /* 最大宽度不收限制 */
+    max-width: unset;
+    padding: 0;
+    padding-top: 72px;
+}
+
+.filter-btns{
+    margin-top: 54px;
+    margin-bottom: 38px;
+}
+.filter-btn{
+    margin: 0 7px;
+    background-color: var(--secondary-color);
+    border: 0;
+    color: var(--text-color-dark-gray);
+    padding: 8px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.filter-btn:focus, 
+.filter-btn:active{
+    outline: none;
+}
+
+.filter-btn.active,
+.filter-btn:hover
+{
+    background-color: var(--primary-color); 
+    color: #fff;
+}
+
+.showcases .cases{
+    width: 100vw;
+}
+.showcases .case-item{
+    width: 25vw;
+    height: 20vw;
+    overflow: hidden;
+}
+
+.case-item img{
+    height: 100%;
+    /* 等比例缩放 */
+    object-fit: cover;
+}
+/* 服务流程区域 */
+.service{
+    padding-top:131px;
+}
+
+.services{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    /* 列之间的宽度 */
+    column-gap: 38px;
+    row-gap: 34px;
+}
+.service-item{
+    display: grid;
+    /* 为格子站位 */
+    grid-template-areas: 
+    "icon title"
+    "icon content";
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 1fr 3fr;
+    padding: 24px;
+    box-shadow: 0px 0px 18px rgba(0,0,0,0.06);
+}
+
+.service-item i.fas{
+    grid-area: icon;
+    font-size: 42px;
+    color: var(--primary-color);
+    padding-top: 6px;
+}
+
+.service-item .service-title{
+    grid-area: title;
+    color: var(--text-color-darker);
+    font-size: 24px;
+
+}
+.service-item .service-content{
+    grid-area: content;
+    color: var(--text-color-gray);
+    line-height: 30px;
+    font-size: 16px;
+    margin-top: 8px;
+}
