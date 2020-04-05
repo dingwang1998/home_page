@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./libs/glide/glide.core.min.css">
     <link rel="stylesheet" href="./libs/glide/glide.theme.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="./libs/scrollReveal/scrollreveal.min.js"></script>
 </head>
 <body>
     <!-- 头部区域 -->
@@ -15,12 +16,12 @@
         <div class="log">峰华科技</div>
         <nav>
             <a href="#">首页</a>
-            <a href="#">关于我们</a>
-            <a href="#">成功案列</a>
-            <a href="#">服务流程</a>
-            <a href="#">团队介绍</a>
-            <a href="#">公司动态</a>
-            <i class="glyphicon glyphicon-search"></i>
+            <a href="#about-us">关于我们</a>
+            <a href="#showcases">成功案列</a>
+            <a href="#service">服务流程</a>
+            <a href="#team-intro">团队介绍</a>
+            <a href="#company-activities">公司动态</a>
+            <i class="fas fa-search"></i>
         </nav>
         <div class="burger">
             <div class="burger-line1"></div>
@@ -29,7 +30,7 @@
          </div>
     </header>
     <!-- 轮播图 -->
-    <div class="glide">
+    <div id="home" class="glide">
         <!-- 轮播容器 -->
         <div data-glide-el="track" class="glide__track">
             <div class="glide__slides">
@@ -77,7 +78,7 @@
     <!-- 类容区域 -->
     <div class="content-warpper">
         <!-- 关于我们 -->
-        <section class="about-us">
+        <section id="about-us" class="about-us">
             <h2 class="title1">关于我们</h2>
             <p class="intro">
                 网络公司不仅仅是提供域名注册、空间租用、网站开发、网站建设与网络营销活动策划相关的企业组织
@@ -128,7 +129,7 @@
             </div>
         </section>
         <!-- 成功案例 -->
-        <section class="showcases section-bg">
+        <section id="showcases" class="showcases section-bg">
             <h2 class="title1">成功案例</h2>
             <div class="filter-btns">
                 <button class="filter-btn active" data-filter="*">全部</button>
@@ -164,7 +165,7 @@
             </div>
         </section>
         <!-- 服务流程 -->
-        <section class="service">
+        <section id="service" class="service">
             <h2 class="title1">服务流程</h2>
             <p class="intro">
                 网络综合公司，提供包括网络基础服务（如域名、主机、邮箱）和网络增值服务（如网站建设和推广，网站优化）等业务
@@ -203,7 +204,7 @@
             </div>
         </section>
         <!-- 团队介绍 -->
-        <section class="team-intro section-bg">
+        <section id="team-intro" class="team-intro section-bg">
             <h2 class="title1">团队介绍</h2>
             <div class="team-members">
                 <div class="team-member">
@@ -316,7 +317,7 @@
             </div>
         </section>
         <!-- 公司动态 -->
-        <section class="company-activities">
+        <section id="company-activities" class="company-activities">
             <h2 class="title1">公司动态</h2>
             <p class="intro">关注公司动态，第一时间获取一手消息</p>
             <div class="activities">
@@ -434,7 +435,7 @@
                     © 2020 峰华科技 - 响应式网络公司官网 版权所有
             </p>
             <div class="scrollToTop">
-                <a href="#">
+                <a href="#home">
                     <i class="fas fa-chevron-up"></i>
                 </a>
             </div>
@@ -443,6 +444,7 @@
     <script src="./libs/anime/anime.min.js"></script>
     <script src="./libs/glide/glide.min.js"></script>
     <script src="./libs/isotope/isotope.pkgd.min.js"></script>
+    <script src="./libs/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
